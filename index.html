@@ -1,13 +1,336 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document Title</title>
-    <!-- Link to your external CSS stylesheet -->
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Norma & Danny | Save The Date</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Hello, World!</h1>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-links">
+      <a href="#story">Story</a>
+      <a href="#details">Details</a>
+      <a href="#schedule">Schedule</a>
+      <a href="https://withjoy.com/danny-and-norma/rsvp" target="_blank">RSVP</a>
+      <a href="#faq">FAQ</a>
+    </div>
+  </nav>
+
+  <!-- Centered Hero Section with Polaroid -->
+  <header class="hero">
+    
+    <div class="hero-header">
+      <h1>Norma &amp; Danny</h1>
+      <div class="hero-details">
+        <div class="date">October 2, 2027</div>
+        <div class="venue">San Juan Capistrano, CA</div>
+      </div>
+    </div>
+
+    <!-- Central Polaroid with Slideshow Container -->
+    <div class="hero-polaroid">
+      <div class="polaroid-image-container">
+        <!-- Photo 1 (Active on load) -->
+        <img class="polaroid-img active" src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=600&auto=format&fit=crop&q=80" alt="Norma & Danny 1">
+        <!-- Photo 2 -->
+        <img class="polaroid-img" src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=600&auto=format&fit=crop&q=80" alt="Norma & Danny 2">
+        <!-- Photo 3 -->
+        <img class="polaroid-img" src="https://images.unsplash.com/photo-1519741497674-611481863552?w=600&auto=format&fit=crop&q=80" alt="Norma & Danny 3">
+      </div>
+    </div>
+
+  </header>
+
+  <!-- Main Content Area -->
+  <div id="content" class="container">
+    
+    <!-- Our Story Section (Editorial Two-Column) -->
+    <section id="story">
+      <h2>Our Story</h2>
+      <div class="section-box">
+        <div class="story-grid">
+          
+          <!-- Left: Polaroid + Mini-Strip Collage -->
+          <!-- Left: Single Long Photobooth Strip -->
+          <div class="story-visual">
+            <div class="story-strip-container">
+              
+  
+              <!-- Long Photo Strip -->
+              <div class="story-strip">
+                <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=400&q=80" alt="Our Memory 1">
+                <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?w=400&q=80" alt="Our Memory 2">
+                <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=400&q=80" alt="Our Memory 3">
+                <div class="strip-caption">10.03.2016</div>
+              </div>
+  
+            </div>
+          </div>
+          
+          <!-- Right: Narrative -->
+          <div class="story-text-container">
+            <h3>Ten Years &amp; Forever</h3>
+            <p>Our story began long before we started dating. Although we first knew of each other in middle school, it wasn't until high school that we became close friends. That friendship eventually grew into something much deeper, and on October 3, 2016, we officially began our journey together.</p>
+            <p>Over the next decade, we grew up side by side, sharing milestones, navigating new adventures, and building a foundation of laughter, support, and friendship that defines our relationship.</p>
+            <p>On December 5, 2025, we took the next step in our story and got officially engaged. Now, we are so excited to celebrate this next chapter and start our forever with the people who mean the most to us.</p>
+          </div>
+  
+        </div>
+      </div>
+    </section>
+
+    <!-- Details Section -->
+    <section id="details">
+      <h2>The Celebration</h2>
+      <div class="section-box">
+        <div class="details-container">
+          
+          <!-- Ceremony Details -->
+          <div class="details-block">
+            <h3>Ceremony</h3>
+            <a href="https://www.google.com/maps/search/?api=1&query=Christ+Cathedral+13280+Chapman+Ave+Garden+Grove+CA+92840" target="_blank" class="map-link" title="View on Google Maps">
+              <p><strong>Christ Cathedral</strong></p>
+              <p>13280 Chapman Ave</p>
+              <p>Garden Grove, CA 92840</p>
+            </a>
+            <div class="highlight">2:30 PM</div>
+            <p style="font-size: 0.8rem; margin-top: 0.8rem; opacity: 0.7; font-style: italic;">(Recommended arrival at 2:00 PM)</p>
+          </div>
+  
+          <!-- Reception Details -->
+          <div class="details-block">
+            <h3>Reception</h3>
+            <a href="https://www.google.com/maps/search/?api=1&query=Serra+Plaza+31920+Del+Obispo+St+San+Juan+Capistrano+CA+92675" target="_blank" class="map-link" title="View on Google Maps">
+              <p><strong>Serra Plaza</strong></p>
+              <p>31920 Del Obispo St</p>
+              <p>San Juan Capistrano, CA 92675</p>
+            </a>
+            <div class="highlight">6:00 PM</div>
+          </div>
+  
+        </div>
+  
+        <!-- Centered Attire Note -->
+        <div class="details-attire-note">
+          Dress Code: Black-Tie Required
+        </div>
+      </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section id="schedule">
+      <h2>Schedule</h2>
+      <div class="section-box">
+        <div class="schedule-grid">
+          
+          <!-- 1. Ceremony -->
+          <div class="schedule-item">
+            <div class="schedule-icon">
+              <!-- Rings SVG -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                <!-- Left Ring -->
+                <circle cx="9" cy="13" r="4.5" />
+                <!-- Right Ring with Diamond -->
+                <circle cx="15" cy="11" r="4.5" />
+                <path d="M15 6.5l-2-2.5 2-2 2 2-2 2.5z" />
+                <path d="M13 4h4" />
+              </svg>
+            </div>
+            <div class="schedule-time">2:30 PM</div>
+            <div class="schedule-event">Ceremony</div>
+            <div class="schedule-location">Christ Cathedral</div>
+          </div>
+  
+          <!-- 2. Cocktail -->
+          <div class="schedule-item">
+            <div class="schedule-icon">
+              <!-- Cocktail SVG -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 3h14l-7 8-7-8z" />
+                <path d="M12 11v8" />
+                <path d="M8 19h8" />
+                <path d="M17 6l-3-3" />
+              </svg>
+            </div>
+            <div class="schedule-time">6:00 PM</div>
+            <div class="schedule-event">Cocktails</div>
+            <div class="schedule-location">Serra Plaza</div>
+          </div>
+  
+          <!-- 3. Reception -->
+          <div class="schedule-item">
+            <div class="schedule-icon">
+              <!-- Fork/Knife/Plate SVG -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                <!-- 3-Prong Dinner Fork -->
+                <path d="M7 13.5v7" />
+                <path d="M5 12c0 1.2 4 1.2 4 0" />
+                <path d="M5 12V5M7 12.5V5M9 12V5" />
+                
+                <!-- Knife -->
+                <path d="M17 13.5v7" />
+                <path d="M17 13.5V5c-2 0-2 2.5-2 5v3.5h2" />
+              </svg>
+            </div>
+            <div class="schedule-time">7:00 PM</div>
+            <div class="schedule-event">Dinner</div>
+          </div>
+  
+          <!-- 4. Party -->
+          <div class="schedule-item">
+            <div class="schedule-icon">
+              <!-- Music/Dance SVG -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 18V5l12-2v13" />
+                <circle cx="6" cy="18" r="3" />
+                <circle cx="18" cy="16" r="3" />
+                <path d="M9 9l12-2" />
+              </svg>
+            </div>
+            <div class="schedule-time">8:00 PM</div>
+            <div class="schedule-event">Party</div>
+          </div>
+  
+          <!-- 5. Placeholder -->
+          <div class="schedule-item">
+            <div class="schedule-icon">
+              <!-- Heart SVG -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+              </svg>
+            </div>
+            <div class="schedule-time">TBD</div>
+            <div class="schedule-event">Placeholder</div>
+          </div>
+
+          <!-- 6. End of Reception -->
+          <div class="schedule-item">
+            <div class="schedule-icon">
+              <!-- Crescent Moon & Single Star SVG -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z" />
+                <path d="M19 5h-2M18 4v2" />
+              </svg>
+            </div>
+            <div class="schedule-time">11:30 PM</div>
+            <div class="schedule-event">End of Reception</div>
+          </div>
+  
+        </div>
+      </div>
+    </section>
+
+    <!-- RSVP Section -->
+    <section id="rsvp">
+      <h2>RSVP</h2>
+      <div class="rsvp-container section-box">
+        <p>To help us prepare for our special day, we kindly request that all guests RSVP online by <strong>August 1, 2027</strong>.</p>
+        <p>Please note that if we do not receive your response by this date, we will regretfully assume you are unable to attend and will miss celebrating with us.</p>
+        <a href="https://withjoy.com/danny-and-norma/rsvp" class="rsvp-btn" target="_blank">RSVP Online</a>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq">
+      <h2>Frequently Asked Questions</h2>
+      <div class="section-box">
+        <div class="faq-container">
+          
+          <!-- Question 1 -->
+          <details class="faq-item">
+            <summary class="faq-question">
+              What is the dress code?
+              <div class="faq-trigger"></div>
+            </summary>
+            <div class="faq-answer">
+              <p>The dress code for our wedding is Black-Tie Required. We ask that men wear a tuxedo and women wear a formal floor-length gown.</p>
+            </div>
+          </details>
+  
+          <!-- Question 2 -->
+          <details class="faq-item">
+            <summary class="faq-question">
+              Are children invited?
+              <div class="faq-trigger"></div>
+            </summary>
+            <div class="faq-answer">
+              <p>While we love your little ones, our wedding will be an adults-only event. We kindly request that you make childcare arrangements for the evening so you can celebrate with us!</p>
+            </div>
+          </details>
+  
+          <!-- Question 3 -->
+          <details class="faq-item">
+            <summary class="faq-question">
+              Can I bring a plus one?
+              <div class="faq-trigger"></div>
+            </summary>
+            <div class="faq-answer">
+              <p>Due to venue capacity limits, we can only accommodate those guests formally listed on your wedding invitation. If you received a plus one, it will be specified on your invitation.</p>
+            </div>
+          </details>
+  
+          <!-- Question 4 -->
+          <details class="faq-item">
+            <summary class="faq-question">
+              Is there parking available at Serra Plaza?
+              <div class="faq-trigger"></div>
+            </summary>
+            <div class="faq-answer">
+              <p>Yes, there is plentiful parking available onsite at Serra Plaza. However, we recommend using rideshare services (Uber/Lyft) if you plan on celebrating with us and drinking.</p>
+            </div>
+          </details>
+
+          <!-- Question 5 -->
+          <details class="faq-item">
+            <summary class="faq-question">
+              Where do you recommend I stay?
+              <div class="faq-trigger"></div>
+            </summary>
+            <div class="faq-answer">
+              <p>For guests traveling from out of town, we recommend the following hotels in the local area:</p>
+              <ul>
+                <li><strong>Hotel Placeholder One</strong> &bull; [Address Placeholder] &bull; <a href="#" target="_blank">Website &amp; Booking</a></li>
+                <li><strong>Hotel Placeholder Two</strong> &bull; [Address Placeholder] &bull; <a href="#" target="_blank">Website &amp; Booking</a></li>
+                <li><strong>Hotel Placeholder Three</strong> &bull; [Address Placeholder] &bull; <a href="#" target="_blank">Website &amp; Booking</a></li>
+              </ul>
+            </div>
+          </details>
+  
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer style="text-align: center; padding: 4rem; opacity: 0.5; font-size: 0.8rem; letter-spacing: 1px;">
+    &copy; 2027 Norma &amp; Danny
+  </footer>
+
+  <!-- Polaroid Developing Slideshow Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const imgs = document.querySelectorAll('.polaroid-img');
+      let currentIndex = 0;
+
+      function nextImage() {
+        // Fade out/undevelop current image
+        imgs[currentIndex].classList.remove('active');
+        
+        // Move to next image
+        currentIndex = (currentIndex + 1) % imgs.length;
+        
+        // Fade in and develop next image
+        imgs[currentIndex].classList.add('active');
+      }
+
+      // Cycle every 6 seconds (gives 2.5s to develop, 3.5s to view)
+      setInterval(nextImage, 6000);
+    });
+  </script>
+
 </body>
 </html>
