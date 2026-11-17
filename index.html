@@ -318,22 +318,30 @@
   <!-- Polaroid Developing Slideshow Script -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      const imgs = document.querySelectorAll('.polaroid-img');
-      let currentIndex = 0;
+      const box = document.querySelector('.polaroid-image-container');
+      const imgs = [...document.querySelectorAll('.polaroid-img')];
+      let i = 0;
 
-      function nextImage() {
-        // Fade out/undevelop current image
-        imgs[currentIndex].classList.remove('active');
-        
-        // Move to next image
-        currentIndex = (currentIndex + 1) % imgs.length;
-        
-        // Fade in and develop next image
-        imgs[currentIndex].classList.add('active');
+      // Decode all images up front so swaps never stall
+      imgs.forEach(im => im.decode?.().catch(() => {}));
+
+      async function next() {
+        const prev = imgs[i];
+        i = (i + 1) % imgs.length;
+        const cur = imgs[i];
+
+        await cur.decode?.().catch(() => {});
+
+        imgs.forEach(im => im.classList.remove('leaving'));
+        prev.classList.replace('active', 'leaving');
+        cur.classList.add('active');
+
+        box.classList.remove('developing');
+        void box.offsetWidth;            // restart the animation
+        box.classList.add('developing');
       }
 
-      // Cycle every 6 seconds (gives 2.5s to develop, 3.5s to view)
-      setInterval(nextImage, 6000);
+      setInterval(next, 6000);
     });
   </script>
 
