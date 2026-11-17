@@ -142,45 +142,31 @@ body {
   filter: grayscale(100%);   /* static: never animated, so no repaints */
   opacity: 0;
   z-index: 0;
-  transition: opacity 1.5s ease;
-  will-change: opacity;
+  transform: scale(1.04) translateZ(0);   /* incoming photo starts slightly zoomed */
+  transition: opacity 1.5s ease, transform 2.5s ease-out;
+  will-change: opacity, transform;
+  backface-visibility: hidden;            /* smoother compositing on iOS Safari */
 }
 
-/* Incoming photo */
+/* Incoming photo: fades in on top and settles to normal size */
 .polaroid-img.active {
   opacity: 1;
   z-index: 2;
+  transform: scale(1) translateZ(0);
 }
 
-/* Outgoing photo stays fully visible underneath until the new one is in (no dark dip) */
+/* Outgoing photo stays fully visible and unchanged underneath until the new one is in */
 .polaroid-img.leaving {
   opacity: 1;
   z-index: 1;
+  transform: scale(1) translateZ(0);
 }
 
-/* "Developing" effect: a dark overlay fading out (opacity only, GPU-friendly) */
-.polaroid-image-container::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  z-index: 3;
-  background: #1a1a1a;
-  opacity: 0;
-  pointer-events: none;
-}
-
-.polaroid-image-container.developing::after {
-  animation: develop 2.5s ease-out;
-}
-
-@keyframes develop {
-  from { opacity: 0.6; }
-  to   { opacity: 0; }
-}
-
-/* Reduced motion: keep the gentle crossfade, skip only the darkening overlay */
+/* Reduced motion: keep the gentle crossfade, skip the zoom */
 @media (prefers-reduced-motion: reduce) {
-  .polaroid-image-container.developing::after { animation: none; }
+  .polaroid-img { transform: none; transition: opacity 1.5s ease; }
+  .polaroid-img.active,
+  .polaroid-img.leaving { transform: none; }
 }
 
 .hero-details {
