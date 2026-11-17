@@ -358,6 +358,21 @@ section h2 {
   transition: color 0.3s ease;
 }
 
+.map-link p {
+  font-size: 0.85rem;       /* address lines */
+}
+
+.map-link p:first-child {
+  font-size: 1.25rem;       /* venue name: Christ Cathedral / Serra Plaza */
+  margin-bottom: 0.4rem;
+}
+
+.map-link p:first-child strong {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
 .map-link:hover {
   color: var(--accent-color);
 }
